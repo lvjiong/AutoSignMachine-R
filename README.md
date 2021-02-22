@@ -181,3 +181,21 @@ docker run \
 2.配置两个手机号需在secret添加unicom_accountSn 的值为 1,2 ;unicom_user_1 ,unicom_password_1,unicom_appid_1,unicom_user_2 ,unicom_password_2,unicom_appid_2。
 
 3.配置三个手机号需在secret添加unicom_accountSn 的值为 1,2,3;其他字段参考第二条
+  
+
+###本地多账号配置  
+修改default.json     
+
+accountSn	需要执行的账号数，如1,2,3  
+
+user-1	你的账号,数字对应accountSn  
+
+password-1	你的服务密码，同上  
+
+appid-1	在你手机unicom文件中，同上  
+
+运行node index.js unicom --config default.json ----tryrun --tasks dailygameflow  
+  
+###修改并发数  
+utils/scheduler.js 中搜索 concurrency 后面的数字改为你想要的，下面的log也改了吧  
+
