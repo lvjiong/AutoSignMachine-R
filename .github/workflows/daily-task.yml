@@ -82,8 +82,8 @@ jobs:
         password_1: ${{ secrets.unicom_password }}
         appid_1: ${{ secrets.unicom_appid }}
       run: node index.js unicom --accountSn=${accountSn} --user-1=${user_1} --password-1=${password_1} --appid-1=${appid_1}  
-    - name: Run unicom daily task with Accountsn = 1,2
-      if: env.UNICOM_ACCOUNTSN == '1,2'
+    - name: Run unicom daily task with Accountsn = 1 2
+      if: env.UNICOM_ACCOUNTSN == '1 2'
       env:
         accountSn: ${{ secrets.unicom_accountSn }}
         user_1: ${{ secrets.unicom_user }}
@@ -94,8 +94,8 @@ jobs:
         appid_2: ${{ secrets.unicom_appid_2 }}
       run: node index.js unicom --accountSn=${accountSn} --user-1=${user_1} --password-1=${password_1} --appid-1=${appid_1} --user-2=${user_2} --password-2=${password_2} --appid-2=${appid_2} 
 
-    - name: Run unicom daily task with Accountsn = 1,2,3
-      if: env.UNICOM_ACCOUNTSN == '1,2,3'
+    - name: Run unicom daily task with Accountsn = 1 2 3
+      if: env.UNICOM_ACCOUNTSN == '1 2 3'
       env:
         accountSn: ${{ secrets.unicom_accountSn }}
         user_1: ${{ secrets.unicom_user }}
