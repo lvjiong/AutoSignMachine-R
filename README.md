@@ -174,7 +174,8 @@ docker run \
 2.点击Settings选项卡，点击左侧Secrets，点击New secret，创建对应参数。
 3.点击Actions选项卡,开启功能。
 
-###更新支持最多三个联通手机号签到
+###更新支持最多三个联通手机号签到  
+
 1.仅签到一个在secret添加unicom_user  ,unicom_password,unicom_appid即可。  
 
 2.配置两个手机号需在secret添加unicom_accountSn 的值为 1,2 ;unicom_user-1 ,unicom_password-1,unicom_appid-1,unicom_user-2 ,unicom_password-2,unicom_appid-2。
