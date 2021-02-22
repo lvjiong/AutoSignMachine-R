@@ -76,33 +76,33 @@ jobs:
       if: ${{ secrets.unicom_accountSn == '1' }}
       env:
         accountSn: ${{ secrets.unicom_accountSn }}
-        user-1: ${{ secrets.unicom_user-1 }}
-        password-1: ${{ secrets.unicom_password-1 }}
-        appid-1: ${{ secrets.unicom_appid-1 }}
+        user-1: ${{ secrets.unicom_user_1 }}
+        password-1: ${{ secrets.unicom_password_1 }}
+        appid-1: ${{ secrets.unicom_appid_1 }}
       run: node index.js unicom --accountSn=${accountSn} --user-1=${user-1} --password-1=${password-1} --appid-1=${appid-1}  
     - name: Run unicom daily task with Accountsn = 1,2
       if: ${{ secrets.unicom_accountSn == '1,2' }}
       env:
         accountSn: ${{ secrets.unicom_accountSn }}
-        user-1: ${{ secrets.unicom_user-1 }}
-        password-1: ${{ secrets.unicom_password-1 }}
-        appid-1: ${{ secrets.unicom_appid-1 }}
-        user-2: ${{ secrets.unicom_user-2 }}
-        password-2: ${{ secrets.unicom_password-2 }}
-        appid-2: ${{ secrets.unicom_appid-2 }}
+        user-1: ${{ secrets.unicom_user_1 }}
+        password-1: ${{ secrets.unicom_password_1 }}
+        appid-1: ${{ secrets.unicom_appid_1 }}
+        user-2: ${{ secrets.unicom_user_2 }}
+        password-2: ${{ secrets.unicom_password_2 }}
+        appid-2: ${{ secrets.unicom_appid_2 }}
       run: node index.js unicom --accountSn=${accountSn} --user-1=${user-1} --password-1=${password-1} --appid-1=${appid-1} --user-2=${user-2} --password-2=${password-2} --appid-2=${appid-2} 
 
     - name: Run unicom daily task with Accountsn = 1,2,3
       if: ${{ secrets.unicom_accountSn == '1,2,3' }}
       env:
         accountSn: ${{ secrets.unicom_accountSn }}
-        user-1: ${{ secrets.unicom_user-1 }}
-        password-1: ${{ secrets.unicom_password-1 }}
-        appid-1: ${{ secrets.unicom_appid-1 }}
-        user-2: ${{ secrets.unicom_user-2 }}
-        password-2: ${{ secrets.unicom_password-2 }}
-        appid-2: ${{ secrets.unicom_appid-2 }}
-        user-3: ${{ secrets.unicom_user-3 }}
-        password-3: ${{ secrets.unicom_password-3}
-        appid-3: ${{ secrets.unicom_appid-3 }}
+        user-1: ${{ secrets.unicom_user_1 }}
+        password-1: ${{ secrets.unicom_password_1 }}
+        appid-1: ${{ secrets.unicom_appid_1 }}
+        user-2: ${{ secrets.unicom_user_2 }}
+        password-2: ${{ secrets.unicom_password_2 }}
+        appid-2: ${{ secrets.unicom_appid_2 }}
+        user-3: ${{ secrets.unicom_user_3 }}
+        password-3: ${{ secrets.unicom_password_3}
+        appid-3: ${{ secrets.unicom_appid_3 }}
       run: node index.js unicom --accountSn=${accountSn} --user-1=${user-1} --password-1=${password-1} --appid-1=${appid-1} --user-2=${user-2} --password-2=${password-2} --appid-2=${appid-2} --user-3=${user-3} --password-3=${password-3} --appid-3=${appid-3} 
