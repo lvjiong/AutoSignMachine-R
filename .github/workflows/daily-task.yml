@@ -50,7 +50,7 @@ jobs:
     
     - name: Set cache time
       id: cdate
-      run: echo "::set-output name=date::$(date +'%Y-%m-%d')" "accountSn:" ${{env.UNICOM_ACCOUNTSN}}
+      run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
     
     - name: restore task cache
       uses: actions/cache@v2

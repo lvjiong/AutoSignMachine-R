@@ -37,7 +37,7 @@ exports.handler = async function (argv) {
   var command = argv._[0]
   var accounts = []
   if ('accountSn' in argv && argv.accountSn) {
-    let accountSns = (argv.accountSn + '').split(' ')
+    let accountSns = (argv.accountSn + '').split(',')
     for (let sn of accountSns) {
       if (('user-' + sn) in argv) {
         let account = {
