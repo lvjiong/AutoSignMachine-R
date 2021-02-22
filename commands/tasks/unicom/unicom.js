@@ -19,10 +19,10 @@ var start = async (params) => {
   }
 
   // 每日签到积分
- // await scheduler.regTask('dailysignin', async (request) => {
- //   await require('./dailysignin').doTask(request, options)
- //   await require('./integral').addFlow(request, options)
- // }, taskOption)
+  await scheduler.regTask('dailysignin', async (request) => {
+    await require('./dailysignin').doTask(request, options)
+    await require('./integral').addFlow(request, options)
+  }, taskOption)
 
   // 冬奥积分活动 20201231
   await scheduler.regTask('winterTwo', async (request) => {
@@ -189,7 +189,7 @@ var start = async (params) => {
     ...taskOption,
     startTime: 20 * 3600
   })
-
+/*
   // 首页-牛气-秒杀抢兑
   await scheduler.regTask('NiujieSpikePrize', async (request) => {
     await require('./Niujie').spikePrize(request, options)
@@ -214,6 +214,7 @@ var start = async (params) => {
     startTime: 1,
     ...taskOption
   })
+*/
 }
 module.exports = {
   start
